@@ -54,14 +54,18 @@ class App extends Component {
             </div>
           )}
         </Transition>
-        <Transition
+        <Modal
+          show={this.state.modalIsOpen}
+          closed={this.closeModal.bind(this)}
+        />
+        {/* <Transition
           in={this.state.modalIsOpen}
           timeout={300}
           mountOnEnter
           unmountOnExit
         >
           {(state) => <Modal show={state} closed={this.closeModal} />}
-        </Transition>
+        </Transition> */}
         {/* {this.state.modalIsOpen ? (
           <Modal
             show={this.state.modalIsOpen}
